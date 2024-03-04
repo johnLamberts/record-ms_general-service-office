@@ -1,0 +1,468 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BAE353DE-165C-46D5-8B9D-97EA8DE15137}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>ProjectGSO_ACCA.My.MyApplication</StartupObject>
+    <RootNamespace>ProjectGSO_ACCA</RootNamespace>
+    <AssemblyName>ProjectGSO_ACCA</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>ProjectGSO_ACCA.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>ProjectGSO_ACCA.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=8.0.32.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\VibLex\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet1.vb">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DbConfiguration.vb" />
+    <Compile Include="Form\Admin\frmAuditBorrower.Designer.vb">
+      <DependentUpon>frmAuditBorrower.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Admin\frmAuditBorrower.vb" />
+    <Compile Include="Form\Admin\frmAuditItem.Designer.vb">
+      <DependentUpon>frmAuditItem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Admin\frmAuditItem.vb" />
+    <Compile Include="Form\Admin\frmAuditItemStock.Designer.vb">
+      <DependentUpon>frmAuditItemStock.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Admin\frmAuditItemStock.vb" />
+    <Compile Include="Form\Admin\frmAuditLog.Designer.vb">
+      <DependentUpon>frmAuditLog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Admin\frmAuditLog.vb" />
+    <Compile Include="Form\Admin\frmAuditReports.Designer.vb">
+      <DependentUpon>frmAuditReports.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Admin\frmAuditReports.vb" />
+    <Compile Include="Form\Admin\frmAuditTransaction.Designer.vb">
+      <DependentUpon>frmAuditTransaction.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Admin\frmAuditTransaction.vb" />
+    <Compile Include="Form\Admin\frmAuditUserAccount.Designer.vb">
+      <DependentUpon>frmAuditUserAccount.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Admin\frmAuditUserAccount.vb" />
+    <Compile Include="Form\Admin\frmBackupAndRestore.Designer.vb">
+      <DependentUpon>frmBackupAndRestore.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Admin\frmBackupAndRestore.vb" />
+    <Compile Include="Form\Admin\frmBorrowerOfItem.Designer.vb">
+      <DependentUpon>frmBorrowerOfItem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Admin\frmBorrowerOfItem.vb" />
+    <Compile Include="Form\Admin\frmBorrowerRecords.Designer.vb">
+      <DependentUpon>frmBorrowerRecords.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Admin\frmBorrowerRecords.vb" />
+    <Compile Include="Form\Admin\frmBorrowers.Designer.vb">
+      <DependentUpon>frmBorrowers.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Admin\frmBorrowers.vb" />
+    <Compile Include="Form\Admin\frmBorrowersControl.Designer.vb">
+      <DependentUpon>frmBorrowersControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Admin\frmBorrowersControl.vb" />
+    <Compile Include="Form\Admin\frmBorrowersCreate.Designer.vb">
+      <DependentUpon>frmBorrowersCreate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Admin\frmBorrowersCreate.vb" />
+    <Compile Include="Form\Admin\frmBorrowersProfile.Designer.vb">
+      <DependentUpon>frmBorrowersProfile.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Admin\frmBorrowersProfile.vb" />
+    <Compile Include="Form\Admin\frmCategory.Designer.vb">
+      <DependentUpon>frmCategory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Admin\frmCategory.vb" />
+    <Compile Include="Form\Admin\frmCategoryCreate.Designer.vb">
+      <DependentUpon>frmCategoryCreate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Admin\frmCategoryCreate.vb" />
+    <Compile Include="Form\Admin\frmChangePassword.Designer.vb">
+      <DependentUpon>frmChangePassword.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Admin\frmChangePassword.vb" />
+    <Compile Include="Form\Admin\frmConfirmItemsToBorrow.Designer.vb">
+      <DependentUpon>frmConfirmItemsToBorrow.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Admin\frmConfirmItemsToBorrow.vb" />
+    <Compile Include="Form\Admin\frmDashboard.Designer.vb">
+      <DependentUpon>frmDashboard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Admin\frmDashboard.vb" />
+    <Compile Include="Form\Admin\frmItem.Designer.vb">
+      <DependentUpon>frmItem.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Admin\frmItem.vb" />
+    <Compile Include="Form\Admin\frmItemCreate.Designer.vb">
+      <DependentUpon>frmItemCreate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Admin\frmItemCreate.vb" />
+    <Compile Include="Form\Admin\frmRecoverData.Designer.vb">
+      <DependentUpon>frmRecoverData.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Admin\frmRecoverData.vb" />
+    <Compile Include="Form\Admin\frmStockIn.Designer.vb">
+      <DependentUpon>frmStockIn.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Admin\frmStockIn.vb" />
+    <Compile Include="Form\Admin\frmSystemPassword.Designer.vb">
+      <DependentUpon>frmSystemPassword.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Admin\frmSystemPassword.vb" />
+    <Compile Include="Form\Admin\frmSystemSettings.Designer.vb">
+      <DependentUpon>frmSystemSettings.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Admin\frmSystemSettings.vb" />
+    <Compile Include="Form\Admin\frmToBorrowDescription.Designer.vb">
+      <DependentUpon>frmToBorrowDescription.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Admin\frmToBorrowDescription.vb" />
+    <Compile Include="Form\Admin\frmTransactionBorrow.Designer.vb">
+      <DependentUpon>frmTransactionBorrow.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Admin\frmTransactionBorrow.vb" />
+    <Compile Include="Form\Admin\frmTransactionList.Designer.vb">
+      <DependentUpon>frmTransactionList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Admin\frmTransactionList.vb" />
+    <Compile Include="Form\Admin\frmUserAccount.Designer.vb">
+      <DependentUpon>frmUserAccount.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Admin\frmUserAccount.vb" />
+    <Compile Include="Form\Admin\frmUserCreate.Designer.vb">
+      <DependentUpon>frmUserCreate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Admin\frmUserCreate.vb" />
+    <Compile Include="Form\Admin\frmWarningStock.Designer.vb">
+      <DependentUpon>frmWarningStock.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Admin\frmWarningStock.vb" />
+    <Compile Include="Form\frmSplashScreen.Designer.vb">
+      <DependentUpon>frmSplashScreen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\frmSplashScreen.vb" />
+    <Compile Include="Form\Staff\frmStaffAuditReport.Designer.vb">
+      <DependentUpon>frmStaffAuditReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Staff\frmStaffAuditReport.vb" />
+    <Compile Include="Form\Staff\frmStaffDashboard.Designer.vb">
+      <DependentUpon>frmStaffDashboard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Staff\frmStaffDashboard.vb" />
+    <Compile Include="Form\Staff\frmStaffMainForm.Designer.vb">
+      <DependentUpon>frmStaffMainForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Staff\frmStaffMainForm.vb" />
+    <Compile Include="Form\Staff\frmStaffSystemSettings.Designer.vb">
+      <DependentUpon>frmStaffSystemSettings.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Staff\frmStaffSystemSettings.vb" />
+    <Compile Include="frmLogin.Designer.vb">
+      <DependentUpon>frmLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.vb" />
+    <Compile Include="frmMainForm.vb" />
+    <Compile Include="frmMainForm.Designer.vb">
+      <DependentUpon>frmMainForm.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Form\Admin\frmAuditBorrower.resx">
+      <DependentUpon>frmAuditBorrower.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Admin\frmAuditItem.resx">
+      <DependentUpon>frmAuditItem.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Admin\frmAuditItemStock.resx">
+      <DependentUpon>frmAuditItemStock.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Admin\frmAuditLog.resx">
+      <DependentUpon>frmAuditLog.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Admin\frmAuditReports.resx">
+      <DependentUpon>frmAuditReports.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Admin\frmAuditTransaction.resx">
+      <DependentUpon>frmAuditTransaction.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Admin\frmAuditUserAccount.resx">
+      <DependentUpon>frmAuditUserAccount.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Admin\frmBackupAndRestore.resx">
+      <DependentUpon>frmBackupAndRestore.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Admin\frmBorrowerOfItem.resx">
+      <DependentUpon>frmBorrowerOfItem.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Admin\frmBorrowerRecords.resx">
+      <DependentUpon>frmBorrowerRecords.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Admin\frmBorrowers.resx">
+      <DependentUpon>frmBorrowers.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Admin\frmBorrowersControl.resx">
+      <DependentUpon>frmBorrowersControl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Admin\frmBorrowersCreate.resx">
+      <DependentUpon>frmBorrowersCreate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Admin\frmBorrowersProfile.resx">
+      <DependentUpon>frmBorrowersProfile.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Admin\frmCategory.resx">
+      <DependentUpon>frmCategory.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Admin\frmCategoryCreate.resx">
+      <DependentUpon>frmCategoryCreate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Admin\frmChangePassword.resx">
+      <DependentUpon>frmChangePassword.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Admin\frmConfirmItemsToBorrow.resx">
+      <DependentUpon>frmConfirmItemsToBorrow.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Admin\frmDashboard.resx">
+      <DependentUpon>frmDashboard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Admin\frmItem.resx">
+      <DependentUpon>frmItem.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Admin\frmItemCreate.resx">
+      <DependentUpon>frmItemCreate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Admin\frmRecoverData.resx">
+      <DependentUpon>frmRecoverData.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Admin\frmStockIn.resx">
+      <DependentUpon>frmStockIn.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Admin\frmSystemPassword.resx">
+      <DependentUpon>frmSystemPassword.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Admin\frmSystemSettings.resx">
+      <DependentUpon>frmSystemSettings.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Admin\frmToBorrowDescription.resx">
+      <DependentUpon>frmToBorrowDescription.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Admin\frmTransactionBorrow.resx">
+      <DependentUpon>frmTransactionBorrow.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Admin\frmTransactionList.resx">
+      <DependentUpon>frmTransactionList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Admin\frmUserAccount.resx">
+      <DependentUpon>frmUserAccount.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Admin\frmUserCreate.resx">
+      <DependentUpon>frmUserCreate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Admin\frmWarningStock.resx">
+      <DependentUpon>frmWarningStock.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\frmSplashScreen.resx">
+      <DependentUpon>frmSplashScreen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Staff\frmStaffAuditReport.resx">
+      <DependentUpon>frmStaffAuditReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Staff\frmStaffDashboard.resx">
+      <DependentUpon>frmStaffDashboard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Staff\frmStaffMainForm.resx">
+      <DependentUpon>frmStaffMainForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\Staff\frmStaffSystemSettings.resx">
+      <DependentUpon>frmStaffSystemSettings.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ActivityLog.rdlc" />
+    <EmbeddedResource Include="Reports\BorrowerProfileReport.rdlc" />
+    <EmbeddedResource Include="Reports\ItemReport.rdlc" />
+    <EmbeddedResource Include="Reports\ItemStockReport.rdlc" />
+    <EmbeddedResource Include="Reports\StockReport.rdlc" />
+    <EmbeddedResource Include="Reports\TransactionReport.rdlc" />
+    <EmbeddedResource Include="Reports\UserAccount.rdlc" />
+    <EmbeddedResource Include="frmMainForm.resx">
+      <DependentUpon>frmMainForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Group 4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Group 5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\test.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\test2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\comic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\testlogo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Illustration - Comic 3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loginbg se2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Illustration - Head Front Chongo face neck hair eye.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Illustration - humaaans sitting 4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kry.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\complted.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tran.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\345917858_276559151387161_7563734434802728788_n.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
